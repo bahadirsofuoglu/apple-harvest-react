@@ -2,6 +2,7 @@ import React from 'react'
 import Apples from '../components/Apples'
 import Basket from '../components/Basket'
 import Tree from '../components/Tree'
+
 function Index () {
   return (
     <div className='container'>
@@ -9,6 +10,9 @@ function Index () {
         <Apples />
         <Tree />
         <Basket />
+      </div>
+      <div>
+        <button>Shake!</button>
       </div>
     </div>
   )
