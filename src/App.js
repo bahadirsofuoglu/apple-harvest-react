@@ -1,7 +1,8 @@
-import './scss/main.scss'
+import React from 'react'
+import Index from './views/Index'
 
 function App () {
-  return <div className='apple'></div>
+  return <Index />
 }
 
 export default App
