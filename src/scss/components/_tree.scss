@@ -1,0 +1,63 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trunk {
+  width: 105px;
+  height: 352px;
+  border-radius: 8px;
+  background: $color-trunk;
+}
+.head {
+  position: absolute;
+  z-index: 1;
+  width: 220px;
+  height: 220.9px;
+  border-radius: 50%;
+  background: $color-head;
+}
+
+.h1 {
+  transform: translateX(-60px) translateY(-190px);
+}
+.h2 {
+  transform: translateX(20px) translateY(-230px);
+}
+.h3 {
+  transform: translateX(40px) translateY(-330px);
+}
+.h4 {
+  transform: translateX(-40px) translateY(-390px);
+}
+.h5 {
+  transform: translateX(-120px) translateY(-350px);
+}
+.h6 {
+  transform: translateX(-140px) translateY(-250px);
+}
+
+.shake {
+  animation: shake 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(4px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}

@@ -1,0 +1,29 @@
+.basket {
+  position: absolute;
+  z-index: 3;
+  margin-top: 130px;
+}
+
+.body {
+  position: absolute;
+  z-index: 1;
+  background: $color-basket;
+  border: 5px solid $color-border;
+  width: 280px;
+  height: 130px;
+  border-radius: 300px 200px 231px 231px / 0px 0px 100px 100px;
+  transform: translateX(-145px) translateY(150px);
+}
+.basket-header {
+  position: absolute;
+  z-index: 5;
+  width: 200px;
+  height: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border: 10px solid $color-basket;
+  border-bottom: 0;
+  transform: translateX(-105px) translateY(50px);
+
+  box-sizing: border-box;
+}

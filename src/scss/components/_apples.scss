@@ -1,0 +1,98 @@
+.apple {
+  position: absolute;
+  background-color: $color-apple;
+  z-index: 3;
+  width: 40px;
+  height: 38px;
+  border-radius: 55% 57% 40% 42% / 64% 65% 70% 68%;
+  border-right: 1px solid $color-apple;
+}
+
+.apple::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 20px;
+  background: #000000;
+  top: -14px;
+  left: 20px;
+  border-radius: 50%;
+  transform: rotate(30.43deg);
+}
+
+.p1 {
+  top: -200px;
+  left: -105px;
+}
+.p1-dropped {
+  top: 260px;
+  left: -55px;
+  transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.p2 {
+  top: -280px;
+}
+.p2-dropped {
+  top: 230px;
+  left: -25px;
+  transition: all 1.15s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.p3 {
+  top: -200px;
+  left: 60px;
+}
+.p3-dropped {
+  top: 260px;
+  left: 4px;
+  transition: all 0.9s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.p4 {
+  top: -50px;
+  left: -95px;
+}
+.p4-dropped {
+  top: 340px;
+  left: -95px;
+  transition: all 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.p5 {
+  top: 0;
+}
+.p5-dropped {
+  top: 340px;
+  transition: all 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.p6 {
+  top: -50px;
+  left: 70px;
+}
+.p6-dropped {
+  top: 340px;
+  left: 70px;
+  transition: all 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.shake-apple {
+  animation: shake 3.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+@keyframes shake-apple {
+  10%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
