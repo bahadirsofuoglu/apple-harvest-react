@@ -1,5 +1,10 @@
-export const shakeAndDropApples = () => {
+export const shakeTree = () => {
   return {
-    type: 'CHANGE_CLASS'
+    type: 'CHANGE_SHAKECLASS'
+  }
+}
+export const dropApples = () => {
+  return {
+    type: 'CHANGE_DROPCLASS'
   }
 }

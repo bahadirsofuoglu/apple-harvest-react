@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 function Tree () {
   const shakeClass = useSelector(state => state.reducer.shakeClass)
-
   const treeClass = `tree ${shakeClass}`
   return (
     <div className='tree-zone'>

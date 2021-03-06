@@ -4,9 +4,17 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
-  if (action.type === 'CHANGE_CLASS') {
+  if (action.type === 'CHANGE_SHAKECLASS') {
     return {
-      shakeClass: 'shake'
+      shakeClass: 'shake',
+
+      dropedClass: '-dropped'
+    }
+  }
+
+  if (action.type === 'CHANGE_DROPCLASS') {
+    return {
+      dropedClass: '-dropped'
     }
   }
 
