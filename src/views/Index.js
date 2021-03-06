@@ -6,8 +6,13 @@ import { useDispatch } from 'react-redux'
 import { shakeTree, dropApples } from '../redux/actions'
 
 function Index () {
-  const dispatchForTree = useDispatch()
-  const dispatchForDrop = useDispatch()
+  const dispatch = useDispatch()
+  const shakeAndDrop = () => {
+    dispatch(shakeTree())
+    setTimeout(() => {
+      dispatch(dropApples())
+    }, 3500)
+  }
   return (
     <div className='container'>
       <div className='tree-zone'>
@@ -16,16 +21,7 @@ function Index () {
         <Basket />
       </div>
       <div>
-        <button
-          onClick={() => {
-            dispatchForTree(shakeTree())
-            setTimeout(() => {
-              dispatchForDrop(dropApples())
-            }, 3500)
-          }}
-        >
-          Shake!
-        </button>
+        <button onClick={shakeAndDrop}>Shake!</button>
       </div>
     </div>
   )
