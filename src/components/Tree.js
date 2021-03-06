@@ -1,10 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-/* console.log(store.getState()) */
 function Tree () {
+  const shakeClass = useSelector(state => state.reducer.shakeClass)
+
+  const treeClass = `tree ${shakeClass}`
   return (
     <div className='tree-zone'>
-      <div className='tree shakeclass}'>
+      <div className={treeClass}>
         <div className='head h1' />
         <div className='head h2' />
         <div className='head h3' />

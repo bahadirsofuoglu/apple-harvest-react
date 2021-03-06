@@ -2,9 +2,12 @@ import React from 'react'
 import Apples from '../components/Apples'
 import Basket from '../components/Basket'
 import Tree from '../components/Tree'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { shakeAndDropApples } from '../redux/actions'
+/* import { useSelector } from 'react-redux' */
 function Index () {
+  /*   const shakeClass = useSelector(state => state.reducer.shakeClass) */
+  const dispatch = useDispatch()
   return (
     <div className='container'>
       <div className='tree-zone'>
@@ -13,10 +16,10 @@ function Index () {
         <Basket />
       </div>
       <div>
-        <button onClick={shakeAndDropApples}>Shake!</button>
+        <button onClick={() => dispatch(shakeAndDropApples())}>Shake!</button>
       </div>
     </div>
   )
 }
 
-export default connect(null)(Index)
+export default Index
