@@ -7,8 +7,7 @@ export const reducer = (state = initialState, action) => {
   if (action.type === 'CHANGE_SHAKECLASS') {
     return {
       shakeClass: 'shake',
-
-      dropedClass: '-dropped'
+      dropedClass: ''
     }
   }
 
