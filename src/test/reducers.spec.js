@@ -1,14 +1,14 @@
 import * as reducer from '../redux/reducers'
 import * as actions from '../redux/actions'
 const initialState = {
-  dropedClass: '',
+  droppedClass: '',
   shakeClass: ''
 }
 describe('reducers', () => {
   it('should change redux state for shakeClass.should not droppedClass', () => {
     const expectedState = {
       shakeClass: 'shake',
-      dropedClass: ''
+      droppedClass: ''
     }
     expect(reducer.reducer(initialState, actions.shakeTree())).toEqual(
       expectedState
@@ -17,7 +17,7 @@ describe('reducers', () => {
 
   it('should change redux state for just droppedClass', () => {
     const expectedState = {
-      dropedClass: '-dropped'
+      droppedClass: '-dropped'
     }
     expect(reducer.reducer(initialState, actions.dropApples())).toEqual(
       expectedState
